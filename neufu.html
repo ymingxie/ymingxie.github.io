@@ -141,7 +141,58 @@
             class="w-col w-col-4 w-col-small-4 w-col-tiny-4"><div
               class="text-block-2"><strong class="bold-text-nerf_v2">Data</strong></div></div></div>
               
-              <div
+
+                  
+            <div data-anchor="slide1"
+            class="section nerf_section"><div class="grey_container w-container"><h2
+                class="grey-heading_nerf">Abstract</h2>
+                <h6 style="color:#8899a5"> Neural Fusion can reconstruct a scene from a monocular video in real-time.</h6>
+                <p
+                class="paragraph-3 nerf_text">We present a novel framework named NeuralFusion for real-time 3D scene reconstruction from a monocular video.
+                Unlike previous methods that estimate single-view depth maps separately on each key-frame and fuse them later, we propose to directly reconstruct local surfaces represented as sparse TSDF volumes for each video fragment sequentially by a neural network. A learning-based TSDF fusion module based on gated recurrent units is used to guide the network to fuse features from previous fragments. 
+                This design allows the network to capture local smoothness prior and global shape prior of 3D surfaces when sequentially reconstructing the surfaces, resulting in accurate, coherent, and real-time surface reconstruction.     
+                The experiments on ScanNet and 7-Scenes datasets show that our system outperforms state-of-the-art methods in terms of both accuracy and speed.
+                To our best knowledge, this is the first learning-based system that is able to reconstruct dense coherent 3D geometry in real-time. 
+                All code and data will be made publicly available upon publication of this paper.</p></div></div>
+
+            <div data-anchor="slide1"
+      class="section nerf_section"><div class="grey_container w-container"><h2
+          class="grey-heading_nerf">Abstract &amp; Method</h2><p
+          class="paragraph-3 nerf_text">We present a method that achieves
+          state-of-the-art results for synthesizing novel views of complex
+          scenes by optimizing an underlying continuous volumetric scene
+          function using a sparse set of input views.</p><img
+          src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700a025ff238947d682a1f_pipeline_website-03.svg"
+          alt="" class="nerf_network" /><p class="paragraph-3 nerf_text">Our
+          algorithm represents a scene using a fully-connected
+          (non-convolutional) deep network, whose input is a single continuous
+          5D coordinate (spatial location (x, y, z) and viewing direction (θ,
+          φ)) and whose output is the volume density and view-dependent emitted
+          radiance at that spatial location.</p><div class="columns-5 w-row"><div
+            class="nerf_pipeline_cols w-col w-col-8 w-col-tiny-tiny-stack"><img
+              src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01.png"
+              sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw,
+              (max-width: 991px) 465.328125px, 606.65625px"
+              srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01-p-500.png
+              500w,
+              https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01-p-800.png
+              800w,
+              https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01.png
+              1500w" alt="" class="nerf_volume_pipeline" /></div><div
+            class="w-col w-col-4 w-col-tiny-tiny-stack"><img
+              src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700a02ee168a2a63febc3b_pipeline_website-02.svg"
+              alt="" class="nerf_volume_rendering" /></div></div><p
+          class="paragraph-3 nerf_text">We synthesize views by querying 5D
+          coordinates along camera rays and use classic volume rendering
+          techniques to project the output colors and densities into an image.
+          Because volume rendering is naturally differentiable, the only input
+          required to optimize our representation is a set of images with known
+          camera poses. We describe how to effectively optimize neural radiance
+          fields to render photorealistic novel views of scenes with complicated
+          geometry and appearance, and demonstrate results that outperform prior
+          work on neural rendering and view synthesis.</p></div></div>
+          
+          <div
           data-delay="10000" data-animation="slide" data-autoplay="1"
           data-duration="800" data-infinite="1" class="nerf_slider_v2 w-slider">
           <div
@@ -380,56 +431,8 @@
           href="https://www.youtube.com/watch?v=LRAqeM8EjOo&amp;feature=youtu.be"
           target="_blank" class="nerf_full_talk_vid">ECCV Technical Talk Video<span
             class="superscript"></span></a></div></div>
-                  
-            <div data-anchor="slide1"
-            class="section nerf_section"><div class="grey_container w-container"><h2
-                class="grey-heading_nerf">Abstract</h2>
-                <h6 style="color:#8899a5"> Neural Body can reconstruct a moving human from a monocular video.</h6>
-                <p
-                class="paragraph-3 nerf_text">We present a novel framework named NeuralFusion for real-time 3D scene reconstruction from a monocular video.
-                Unlike previous methods that estimate single-view depth maps separately on each key-frame and fuse them later, we propose to directly reconstruct local surfaces represented as sparse TSDF volumes for each video fragment sequentially by a neural network. A learning-based TSDF fusion module based on gated recurrent units is used to guide the network to fuse features from previous fragments. 
-                This design allows the network to capture local smoothness prior and global shape prior of 3D surfaces when sequentially reconstructing the surfaces, resulting in accurate, coherent, and real-time surface reconstruction.     
-                The experiments on ScanNet and 7-Scenes datasets show that our system outperforms state-of-the-art methods in terms of both accuracy and speed.
-                To our best knowledge, this is the first learning-based system that is able to reconstruct dense coherent 3D geometry in real-time. 
-                All code and data will be made publicly available upon publication of this paper.</p></div></div>
 
-            <div data-anchor="slide1"
-      class="section nerf_section"><div class="grey_container w-container"><h2
-          class="grey-heading_nerf">Abstract &amp; Method</h2><p
-          class="paragraph-3 nerf_text">We present a method that achieves
-          state-of-the-art results for synthesizing novel views of complex
-          scenes by optimizing an underlying continuous volumetric scene
-          function using a sparse set of input views.</p><img
-          src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700a025ff238947d682a1f_pipeline_website-03.svg"
-          alt="" class="nerf_network" /><p class="paragraph-3 nerf_text">Our
-          algorithm represents a scene using a fully-connected
-          (non-convolutional) deep network, whose input is a single continuous
-          5D coordinate (spatial location (x, y, z) and viewing direction (θ,
-          φ)) and whose output is the volume density and view-dependent emitted
-          radiance at that spatial location.</p><div class="columns-5 w-row"><div
-            class="nerf_pipeline_cols w-col w-col-8 w-col-tiny-tiny-stack"><img
-              src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01.png"
-              sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw,
-              (max-width: 991px) 465.328125px, 606.65625px"
-              srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01-p-500.png
-              500w,
-              https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01-p-800.png
-              800w,
-              https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700ef6067b43821ed52768_pipeline_website-01.png
-              1500w" alt="" class="nerf_volume_pipeline" /></div><div
-            class="w-col w-col-4 w-col-tiny-tiny-stack"><img
-              src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5e700a02ee168a2a63febc3b_pipeline_website-02.svg"
-              alt="" class="nerf_volume_rendering" /></div></div><p
-          class="paragraph-3 nerf_text">We synthesize views by querying 5D
-          coordinates along camera rays and use classic volume rendering
-          techniques to project the output colors and densities into an image.
-          Because volume rendering is naturally differentiable, the only input
-          required to optimize our representation is a set of images with known
-          camera poses. We describe how to effectively optimize neural radiance
-          fields to render photorealistic novel views of scenes with complicated
-          geometry and appearance, and demonstrate results that outperform prior
-          work on neural rendering and view synthesis.</p></div></div>
-          
+
           <div
       class="white_section_nerf"><div class="w-container"><h2
           class="grey-heading_nerf">Synthetic Results</h2><p class="paragraph-3
