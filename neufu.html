@@ -145,6 +145,9 @@
           class="section nerf_section"><div class="grey_container w-container"><h2
               class="grey-heading_nerf">Abstract</h2>
               <h6 style="color:#8899a5" class='paragraph-3 nerf_text'> Neural Fusion can reconstruct a scene from a monocular video in real-time.</h6>
+              <video width="70%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                <source src="videos/web-scene1.mp4" type="video/mp4">
+            </video>
               <p style="color:#000000" class="paragraph-3 nerf_text">We present a novel framework named NeuralFusion for real-time 3D scene reconstruction from a monocular video.
               Unlike previous methods that estimate single-view depth maps separately on each key-frame and fuse them later, we propose to directly reconstruct local surfaces represented as sparse TSDF volumes for each video fragment sequentially by a neural network. A learning-based TSDF fusion module based on gated recurrent units is used to guide the network to fuse features from previous fragments. 
               This design allows the network to capture local smoothness prior and global shape prior of 3D surfaces when sequentially reconstructing the surfaces, resulting in accurate, coherent, and real-time surface reconstruction.     
