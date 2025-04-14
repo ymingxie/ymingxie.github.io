@@ -32,3 +32,12 @@
   display: none;
   color: #007bff;
 }
+
+/* Ensure bold text works properly */
+b, strong {
+  font-weight: bold !important;
+}
+
+.text b, .text strong {
+  font-weight: bold !important;
+}
